@@ -9,7 +9,8 @@ def chatgpt_response(prompt):
                                               messages=[{
                                                   "role": "user",
                                                   "content": prompt
-                                              }])
+                                              }],
+                                              temperature=1)
     response = completion.choices[0].message.content
     print(response)
     return response
